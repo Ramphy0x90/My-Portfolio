@@ -1,8 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
-
 html, body { height: 100%; }
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
   background-color: #161A1D !important;
+}
+
+.nav-link{
+  transition: color 0.1s linear;
+}
+
+.nav-link:hover{
+  color: #38B000 !important;
 }
