@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavMenuComponent } from './component/nav-menu/nav-menu.component';
 import { SplitPipe } from './pipes/split.pipe';
 import { StripPipe } from './pipes/strip.pipe';
+import {ScrollToModule} from '@nicky-lenaers/ngx-scroll-to';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { StripPipe } from './pipes/strip.pipe';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    ScrollToModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
