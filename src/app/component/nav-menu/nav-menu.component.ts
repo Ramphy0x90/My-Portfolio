@@ -9,7 +9,8 @@ export class NavMenuComponent implements OnInit {
   navOptions: string[] = [
     'home',
     'about-me',
-
+    'projects',
+    'contact-me'
   ];
 
   constructor() { }
