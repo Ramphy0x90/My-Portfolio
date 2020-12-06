@@ -6,6 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nav-menu.component.scss']
 })
 export class NavMenuComponent implements OnInit {
+  navOptions: string[] = [
+    'home',
+    'about-me',
+
+  ];
 
   constructor() { }
 

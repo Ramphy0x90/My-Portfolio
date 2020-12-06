@@ -6,12 +6,16 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './container/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavMenuComponent } from './component/nav-menu/nav-menu.component';
+import { SplitPipe } from './pipes/split.pipe';
+import { StripPipe } from './pipes/strip.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    NavMenuComponent
+    NavMenuComponent,
+    SplitPipe,
+    StripPipe
   ],
   imports: [
     BrowserModule,
