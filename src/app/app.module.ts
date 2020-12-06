@@ -9,6 +9,11 @@ import { NavMenuComponent } from './component/nav-menu/nav-menu.component';
 import { SplitPipe } from './pipes/split.pipe';
 import { StripPipe } from './pipes/strip.pipe';
 import {ScrollToModule} from '@nicky-lenaers/ngx-scroll-to';
+import { SkillsComponent } from './component/skills/skills.component';
+import { WorkExperienceComponent } from './component/work-experience/work-experience.component';
+import { AboutMeComponent } from './component/about-me/about-me.component';
+import { ProjectsComponent } from './component/projects/projects.component';
+import { ContactMeComponent } from './component/contact-me/contact-me.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +21,12 @@ import {ScrollToModule} from '@nicky-lenaers/ngx-scroll-to';
     HomeComponent,
     NavMenuComponent,
     SplitPipe,
-    StripPipe
+    StripPipe,
+    SkillsComponent,
+    WorkExperienceComponent,
+    AboutMeComponent,
+    ProjectsComponent,
+    ContactMeComponent
   ],
   imports: [
     BrowserModule,
