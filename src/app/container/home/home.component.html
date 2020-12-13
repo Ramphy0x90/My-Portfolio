@@ -1,15 +1,21 @@
-<body data-spy="scroll" data-target="#nav-menu" data-offset="0" style="padding-top:56px">
-<app-nav-menu id="nav-menu"></app-nav-menu>
-<section id="home" class="bg-danger">
+<body data-spy="scroll" data-target="#nav-menu" data-offset="0">
+<section id="home" class="bg-danger h-100">
+  <div class="w-100 h-100 d-flex justify-content-center align-items-center"
+       style="background: rgba(22, 26, 29, 0.5)">
+    <div class="text-center">
+      <div class="rellax" data-rellax-speed="-3" style="font-size: 1.6em">Hi, Im Ramphy</div>
+      <div class="rellax" data-rellax-speed="6">a junior developer</div>
+    </div>
+  </div>
 </section>
-<section id="about-me" class="bg-info">
+<app-nav-menu id="nav-menu"></app-nav-menu>
+<section id="about-me" class="bg-info h-100">
   <app-about-me></app-about-me>
 </section>
-<section id="projects" class="bg-primary">
+<section id="projects" class="bg-primary h-100">
   <app-projects></app-projects>
 </section>
-<section id="contact-me" class="bg-warning">
+<section id="contact-me">
   <app-contact-me></app-contact-me>
 </section>
 </body>
-

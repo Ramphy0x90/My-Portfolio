@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {DataService} from '../../service/data.service';
 
 @Component({
@@ -13,6 +13,21 @@ export class NavMenuComponent implements OnInit {
     this.navOptions = this.dataService.getNavOptions();
   }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+    window.onscroll = function() {
+      stickyMenu();
+    };
+
+    let navbar = document.getElementsByClassName('navbar')[0];
+    let sticky = navbar instanceof HTMLElement ? navbar.offsetTop : 0;
+
+    function stickyMenu() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add('sticky');
+      } else {
+        navbar.classList.remove('sticky');
+      }
+    }
+  }
 
 }

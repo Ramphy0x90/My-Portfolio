@@ -2,6 +2,12 @@ nav{
   background-color: #161A1D !important;
 }
 
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
 .active{
   color: #38B000 !important;
 }
