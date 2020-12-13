@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NAV_OPTIONS } from '../../mock/nav-options';
+import {DataService} from '../../service/data.service';
 
 @Component({
   selector: 'app-contact-me',
@@ -7,11 +7,12 @@ import { NAV_OPTIONS } from '../../mock/nav-options';
   styleUrls: ['./contact-me.component.scss']
 })
 export class ContactMeComponent implements OnInit {
-  public navOptions: string[] = NAV_OPTIONS;
+  public navOptions: String[];
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor(private dataService: DataService) {
+    this.navOptions = dataService.getNavOptions();
   }
+
+  ngOnInit(): void {}
 
 }
