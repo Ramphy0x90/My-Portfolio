@@ -13,7 +13,9 @@ import { SkillsComponent } from './component/skills/skills.component';
 import { WorkExperienceComponent } from './component/work-experience/work-experience.component';
 import { AboutMeComponent } from './component/about-me/about-me.component';
 import { ProjectsComponent } from './component/projects/projects.component';
-import { ContactMeComponent } from './component/contact-me/contact-me.component';
+import { ContactMeComponent } from './component/contact-me/contact-me.component'
+import { NgParticlesModule } from 'ng-particles';
+import { ParticlesComponent } from './component/particles/particles.component';
 
 @NgModule({
   declarations: [
@@ -26,12 +28,14 @@ import { ContactMeComponent } from './component/contact-me/contact-me.component'
     WorkExperienceComponent,
     AboutMeComponent,
     ProjectsComponent,
-    ContactMeComponent
+    ContactMeComponent,
+    ParticlesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    NgParticlesModule,
     ScrollToModule.forRoot()
   ],
   providers: [],

@@ -24,8 +24,10 @@
     "@nicky-lenaers/ngx-scroll-to": "^9.0.0",
     "bootstrap": "^4.5.3",
     "jquery": "^3.5.1",
+    "ng-particles": "^2.1.11",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
+    "tsparticles": "^1.18.11",
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
