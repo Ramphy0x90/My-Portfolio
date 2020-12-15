@@ -8,32 +8,40 @@ import Typewriter from 't-writer.js';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  public target;
+  public options = {
+    loop: false,
+    typeSpeed: 72,
+    deleteSpeed: 80,
+  };
 
-  public options = {loop: true};
-
-  public writer;
+  public homeTitle;
+  public homeSubTitle;
 
   constructor() {}
 
   ngOnInit(): void {
     let rellax = new Rellax('.rellax');
 
-    console.log(this.target);
+    this.homeTitle = new Typewriter(document.querySelector('.tw-title'), this.options);
+    this.homeSubTitle = new Typewriter(document.querySelector('.tw-subtitle'), this.options);
 
-    this.target = document.querySelector('.tw');
-
-    this.writer = new Typewriter(this.target, {
-      loop: true,
-      typeSpeed: 80,
-      deleteSpeed: 80,
-      typeColor: 'red'
-    });
-
-    this.writer
-      .type("Hi, Im Ramphy a junior developer")
-      .rest(2500)
-      .start()
+    this.typeWriterAnimations();
   }
 
+  typeWriterAnimations(){
+    this.homeTitle
+      .rest(666)
+      .type(", Im Ramphy ")
+      .rest(500)
+      .type("a junior developer")
+      .removeCursor()
+      .then(this.homeSubTitle.start.bind(this.homeSubTitle))
+      .start();
+
+    this.homeSubTitle
+      .type("and this is my portfolio")
+      .rest(2500)
+      .clear()
+      .then(this.homeTitle.start.bind(this.homeTitle))
+  }
 }
