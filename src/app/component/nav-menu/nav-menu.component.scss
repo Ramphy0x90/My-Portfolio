@@ -11,3 +11,11 @@ nav{
 .active{
   color: #38B000 !important;
 }
+
+.navbar-brand{
+  transition: color 0.1s linear;
+}
+
+.navbar-brand:hover{
+  color: #38B000 !important;
+}

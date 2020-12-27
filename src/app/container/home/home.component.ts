@@ -10,7 +10,7 @@ import Typewriter from 't-writer.js';
 export class HomeComponent implements OnInit {
   public options = {
     loop: false,
-    typeSpeed: 72,
+    typeSpeed: 70,
     deleteSpeed: 80,
   };
 
@@ -40,8 +40,8 @@ export class HomeComponent implements OnInit {
 
     this.homeSubTitle
       .type("and this is my portfolio")
-      .rest(2500)
-      .clear()
-      .then(this.homeTitle.start.bind(this.homeTitle))
+      .removeCursor();
+      /*.rest(2500)
+      .then(this.homeTitle.start.bind(this.homeTitle))*/
   }
 }
