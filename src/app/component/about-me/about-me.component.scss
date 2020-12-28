@@ -1,7 +1,23 @@
 #main-container {
-  background: #161A1D !important;
+  position: relative;
 }
 
 img {
-  max-width: 30%;
+  position: relative;
+  max-width: 40%;
+  display: block;
+  z-index: 1;
+}
+
+.img-container{
+  z-index: 1;
+}
+
+.txt-container {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 80%;
+  height: 80%;
+  z-index: 0;
 }

@@ -21,7 +21,14 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     let parallaxTitles = new Rellax('.parallax-title');
-    //let parallaxAboutMe = new Rellax('.parallax-about_me');
+    /*let parallaxAboutMe = new Rellax('.parallax-about_me-img', {
+      speed: 2,
+      center: true,
+      wrapper: null,
+      round: true,
+      vertical: true,
+      horizontal: false
+    });*/
 
     this.homeTitle = new Typewriter(document.querySelector('.tw-title'), this.options);
     this.homeSubTitle = new Typewriter(document.querySelector('.tw-subtitle'), this.options);
