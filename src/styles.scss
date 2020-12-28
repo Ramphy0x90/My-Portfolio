@@ -1,4 +1,4 @@
-*{
+* {
   color: #E5E5E5 !important;
 }
 
@@ -13,10 +13,18 @@ body {
   background-color: #262A2D !important;
 }
 
-.nav-link{
+nav {
+  z-index: 1;
+}
+
+section {
+  z-index: 0;
+}
+
+.nav-link {
   transition: color 0.1s linear;
 }
 
-.nav-link:hover{
+.nav-link:hover {
   color: #38B000 !important;
 }

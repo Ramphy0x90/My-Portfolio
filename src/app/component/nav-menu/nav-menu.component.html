@@ -7,7 +7,7 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item" *ngFor="let option of navOptions">
-        <a class="nav-link" [ngxScrollTo]="'#'+option" [href]="'#'+option" (click)="$event.preventDefault()">{{option | strip: "-" | titlecase}}</a>
+        <a class="nav-link" ngxScrollTo [ngxScrollToOffset]="sectionPositions[option]" [href]="'#'+option" (click)="$event.preventDefault()">{{option | strip: "-" | titlecase}}</a>
       </li>
     </ul>
   </div>

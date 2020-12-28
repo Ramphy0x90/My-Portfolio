@@ -20,7 +20,8 @@ export class HomeComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    let rellax = new Rellax('.rellax');
+    let parallaxTitles = new Rellax('.parallax-title');
+    //let parallaxAboutMe = new Rellax('.parallax-about_me');
 
     this.homeTitle = new Typewriter(document.querySelector('.tw-title'), this.options);
     this.homeSubTitle = new Typewriter(document.querySelector('.tw-subtitle'), this.options);
@@ -31,7 +32,7 @@ export class HomeComponent implements OnInit {
   typeWriterAnimations(){
     this.homeTitle
       .rest(666)
-      .type(", Im Ramphy ")
+      .type(", I'm Ramphy ")
       .rest(500)
       .type("a junior developer")
       .removeCursor()
@@ -41,7 +42,5 @@ export class HomeComponent implements OnInit {
     this.homeSubTitle
       .type("and this is my portfolio")
       .removeCursor();
-      /*.rest(2500)
-      .then(this.homeTitle.start.bind(this.homeTitle))*/
   }
 }
