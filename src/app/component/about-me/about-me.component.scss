@@ -9,7 +9,7 @@ img {
   z-index: 1;
 }
 
-.img-container{
+.img-container {
   z-index: 1;
 }
 
@@ -17,7 +17,17 @@ img {
   position: absolute;
   right: 0;
   top: 0;
-  width: 80%;
-  height: 80%;
   z-index: 0;
+}
+
+[data-scroll] {
+  transition: transform 700ms;
+}
+
+[data-scroll="in"] {
+  transform: translateY(0);
+}
+
+[data-scroll="out"] {
+  transform: translateY(200px);
 }
