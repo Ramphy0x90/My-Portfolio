@@ -20,11 +20,9 @@ export class HomeComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    /*let parallaxAboutMeImage = new Rellax('.img-container', {
-      speed: 1,
-    });*/
-
-
+    let parallaxAboutMeImage = new Rellax('.img-container', {
+      speed: 4,
+    });
     let parallaxAboutMeText = new Rellax('.txt-container', {
       speed: 1,
     });
