@@ -1,6 +1,5 @@
 #main-container {
   position: relative;
-  display: none;
 }
 
 .img-container {
@@ -8,20 +7,31 @@
 }
 
 .img-container img {
-  position: relative;
+  display: none;
   max-width: 40%;
-  display: block;
+  position: relative;
   box-shadow: 20px 20px 60px #262a2d,
   -20px -20px 60px #000000;
 }
 
 .txt-container {
+  width: 100%;
   position: absolute;
   right: 0;
   top: 0;
+  text-align: justify;
   background: #38B000;
   box-shadow: 2px 2px 25px #262a2d,
   -2px -2px 25px #000000;
+}
+
+.txt-container img {
+  display: block;
+}
+
+.progress {
+  height: 10px;
+  border-radius: 25px;
 }
 
 @media (min-width: 576px) {
@@ -39,20 +49,28 @@
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
-  #main-container {
-    display: block;
-  }
-  .card {
+  .txt-container img{
     display: none;
   }
+
+  .img-container img {
+    display: block;
+  }
+
   .txt-container {
+    width: 75%;
     background-color: green !important;
+  }
+
+  .txt, .skill-progress {
+    margin-left: 22%;
   }
 }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
   .txt-container {
-    background-color: yellow !important;
+    font-size: 1.3em;
+    background-color: #FCA311 !important;
   }
 }

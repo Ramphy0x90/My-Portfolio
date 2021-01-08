@@ -7,7 +7,7 @@ import {Component, OnInit} from '@angular/core';
 })
 export class AboutMeComponent implements OnInit {
 
-  text_1: string = 'I am a highly motivated and self-taught person. I have good knowledge in Java, Php and MySql, acquired during my apprenticeship as an application developer. In addition, I have knowledge in Python, Ionic, Angular and reverse engineering (Radare2, IDA) learned independently.';
+  text_1: string = 'I am a highly motivated and self-taught person. I have good knowledge in Java, Php and MySql, acquired during my apprenticeship as an application developer. In addition, I have knowledge in Python, Ionic, Angular and Assembly x64 learned independently.';
 
   constructor() {
   }
