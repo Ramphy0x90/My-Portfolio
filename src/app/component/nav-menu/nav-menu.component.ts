@@ -56,7 +56,7 @@ export class NavMenuComponent implements OnInit {
         let position = tempOption instanceof HTMLElement ? tempOption.offsetTop : 0;
         let newPosition = position - window.pageYOffset;
 
-        tempSectionPositions[String(option)] = (newPosition > 0) ? newPosition : newPosition + navHeight;
+        tempSectionPositions[String(option)] = (newPosition > 0 || position == 0) ? newPosition : newPosition + navHeight;
       });
     }
 
