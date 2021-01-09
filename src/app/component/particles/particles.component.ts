@@ -11,7 +11,7 @@ export class ParticlesComponent implements OnInit {
     background: {
 
       color: {
-        value: "#161a1d"
+        value: "#070707"
       }
 
     },
