@@ -1,3 +1,25 @@
 footer{
   background-color: #161A1D !important;
 }
+
+.fi svg{
+  transition: fill 320ms;
+}
+
+.fi svg{
+  width: 30px;
+  height: auto;
+}
+
+.fi svg:hover{
+  fill: #38B000;
+}
+
+.li-ic{
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.footer-copyright{
+  font-size: .85em;
+}
