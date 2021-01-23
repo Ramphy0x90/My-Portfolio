@@ -15,9 +15,10 @@ export class NavMenuComponent implements OnInit {
   }
 
   ngOnInit() {
-    let navbar = document.getElementsByClassName('navbar')[0];
-    let navHeight = navbar instanceof HTMLElement ? navbar.offsetHeight : 0;
-    let sticky = navbar instanceof HTMLElement ? navbar.offsetTop : 0;
+    const docHeight = window.innerHeight;
+
+    let navbar = document.getElementById("main-nav");
+    let navHeight;
 
     let tempNavOptions = this.navOptions;
     let tempSectionPositions = this.sectionPositions;
@@ -25,18 +26,22 @@ export class NavMenuComponent implements OnInit {
     let activeNavItem;
 
     window.onload = function() {
+      navHeight = navbar.offsetHeight;
+
       setSectionsHeight();
       colorLinks();
     };
 
     window.onscroll = function() {
-      //stickyMenu();
+      stickyMenu();
       updatePositions();
       colorLinks();
+
+      console.log(navHeight)
     };
 
     function stickyMenu() {
-      if (window.pageYOffset >= sticky) {
+      if (window.pageYOffset >= docHeight - navHeight) {
         navbar.classList.add('sticky');
       } else {
         navbar.classList.remove('sticky');
@@ -48,7 +53,7 @@ export class NavMenuComponent implements OnInit {
         let navItem = document.getElementById('nav-item-' + index).getElementsByTagName('a')[0];
         let offsetFromNav = tempSectionPositions[String(option)];
 
-        if (offsetFromNav <= 100 || window.pageYOffset == (document.body.scrollHeight - document.documentElement.offsetHeight)) {
+        if (offsetFromNav <= 0 || window.pageYOffset == (document.body.scrollHeight - document.documentElement.offsetHeight)) {
           activeNavItem = navItem;
         }
 
@@ -63,8 +68,6 @@ export class NavMenuComponent implements OnInit {
     }
 
     function setSectionsHeight() {
-      const docHeight = window.innerHeight;
-
       tempNavOptions.forEach(option => {
         let tempOption = document.getElementById(String(option));
 
@@ -80,7 +83,6 @@ export class NavMenuComponent implements OnInit {
         let position = tempOption instanceof HTMLElement ? tempOption.offsetTop : 0;
         let newPosition = position - window.pageYOffset;
 
-        //tempSectionPositions[String(option)] = (newPosition > 0 || position == 0) ? newPosition : newPosition + navHeight;
         tempSectionPositions[String(option)] = newPosition - navHeight;
       });
     }
