@@ -2,11 +2,15 @@ import {Component, OnInit} from '@angular/core';
 import * as Rellax from '../../../assets/libraries/rellax/rellax.min.js';
 import Typewriter from 't-writer.js';
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
+
 export class HomeComponent implements OnInit {
   public options = {
     loop: false,
@@ -20,12 +24,14 @@ export class HomeComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    let parallaxAboutMeImage = new Rellax('.img-container', {
+    AOS.init();
+
+    /*let parallaxAboutMeImage = new Rellax('.img-container', {
       speed: 4,
-    });
-    let parallaxAboutMeText = new Rellax('.txt-container', {
+    });*/
+    /*let parallaxAboutMeText = new Rellax('.txt-container', {
       speed: 1,
-    });
+    });*/
 
 
     this.homeTitle = new Typewriter(document.querySelector('.tw-title'), this.options);
