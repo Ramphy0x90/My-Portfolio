@@ -1,5 +1,6 @@
 #main-container {
-  position: relative;
+  height: 100%;
+  padding: 0;
 }
 
 .img-container {
@@ -9,6 +10,7 @@
 .img-container img {
   display: none;
   max-width: 40%;
+  margin-top: 20%;
   position: relative;
   box-shadow: 20px 20px 60px #262a2d,
   -20px -20px 60px #000000;
@@ -16,11 +18,14 @@
 
 .txt-container {
   width: 100%;
-  position: absolute;
+  margin: 20px;
   right: 0;
-  top: 0;
+  top: 10%;
   text-align: justify;
-  background: #38B000;
+  background: #141E30;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   box-shadow: 2px 2px 25px #262a2d,
   -2px -2px 25px #000000;
 }
@@ -36,19 +41,23 @@
 
 @media (min-width: 576px) {
   .txt-container {
-    background-color: red !important;
+    //background-color: red !important;
   }
 }
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
   .txt-container {
-    background-color: blue !important;
+    //background-color: blue !important;
   }
 }
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
+  #main-container{
+    position: relative;
+  }
+
   .txt-container img{
     display: none;
   }
@@ -59,7 +68,8 @@
 
   .txt-container {
     width: 75%;
-    background-color: green !important;
+    position: absolute;
+    //background-color: green !important;
   }
 
   .txt, .skill-progress {
@@ -71,6 +81,6 @@
 @media (min-width: 1200px) {
   .txt-container {
     font-size: 1.3em;
-    background-color: #38B000 !important;
+    //background-color: #38B000 !important;
   }
 }
