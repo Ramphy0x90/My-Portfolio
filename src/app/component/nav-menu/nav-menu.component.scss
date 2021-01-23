@@ -1,14 +1,16 @@
 nav{
-  background-color: #161A1D !important;
-}
-
-.sticky {
+  background-color: transparent !important;
   position: fixed;
   top: 0;
   width: 100%;
+  transition: background-color 600ms;
 }
 
-.active{
+.sticky {
+  background-color: #161A1D !important;
+}
+
+.custom-active{
   color: #38B000 !important;
 }
 
