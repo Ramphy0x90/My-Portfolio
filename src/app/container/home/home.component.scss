@@ -4,4 +4,13 @@
 
 #about-me{
   background: #262a2d !important;
+  display: table;
+  //height: 150% !important;
+}
+
+@media (min-width: 992px) {
+  #about-me{
+    display: block;
+    height: 100% !important;
+  }
 }
