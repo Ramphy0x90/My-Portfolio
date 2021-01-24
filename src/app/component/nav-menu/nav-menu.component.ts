@@ -25,11 +25,11 @@ export class NavMenuComponent implements OnInit {
     this.docHeight = window.innerHeight;
     this.navHeight = this.navbar.offsetHeight;
 
+    window.addEventListener('load', this.onLoad, true);
     window.addEventListener('scroll', this.onScroll, true);
 
     this.updatePositions();
     this.setSectionsHeight();
-    this.colorLinks();
   }
 
   stickyMenu() {
@@ -78,6 +78,10 @@ export class NavMenuComponent implements OnInit {
 
     this.activeNavItem.classList.add('custom-active');
   }
+
+  onLoad = (): void => {
+    this.colorLinks();
+  };
 
   onScroll = (): void => {
     this.stickyMenu();
