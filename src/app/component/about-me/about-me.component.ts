@@ -1,5 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 @Component({
   selector: 'app-about-me',
   templateUrl: './about-me.component.html',
@@ -13,6 +16,7 @@ export class AboutMeComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    AOS.init();
   }
 
 }

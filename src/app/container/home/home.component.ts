@@ -2,9 +2,6 @@ import {Component, OnInit} from '@angular/core';
 import * as Rellax from '../../../assets/libraries/rellax/rellax.min.js';
 import Typewriter from 't-writer.js';
 
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -24,8 +21,6 @@ export class HomeComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    AOS.init();
-
     /*let parallaxAboutMeImage = new Rellax('.img-container', {
       speed: 4,
     });*/
