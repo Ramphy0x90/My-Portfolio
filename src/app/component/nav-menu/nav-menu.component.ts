@@ -80,6 +80,8 @@ export class NavMenuComponent implements OnInit {
   }
 
   onLoad = (): void => {
+    this.navHeight = this.navbar.offsetHeight;
+
     this.colorLinks();
   };
 
