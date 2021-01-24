@@ -1,5 +1,6 @@
 <nav id="main-nav" class="navbar navbar-expand-lg navbar-dark">
-  <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+  <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav"
           aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -7,7 +8,8 @@
     <ul class="navbar-nav text-center ml-lg-auto">
       <li class="nav-item" *ngFor="let option of navOptions; let index = index" [id]="'nav-item-'+index">
         <a class="nav-link" ngxScrollTo [ngxScrollToOffset]="sectionPositions[option]" [href]="'#'+option"
-           (click)="$event.preventDefault()">{{option | strip: "-" | titlecase}}</a>
+           (click)="$event.preventDefault()" data-toggle="collapse"
+           data-target=".navbar-collapse.show">{{option | strip: "-" | titlecase}}</a>
       </li>
     </ul>
   </div>
