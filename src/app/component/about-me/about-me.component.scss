@@ -3,8 +3,15 @@
   padding: 0;
 }
 
-.img-container {
+.mask {
+  width: 100%;
+  height: 100%;
+  position: absolute;
   z-index: 1;
+}
+
+.img-container {
+  z-index: 2;
 }
 
 .img-container img {
@@ -22,12 +29,12 @@
   right: 0;
   top: 10%;
   text-align: justify;
-  background: #141E30;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+  background: #141E30;
+  background: -webkit-linear-gradient(to right, #243B55, #141E30);
+  background: linear-gradient(to right, #243B55, #141E30);
   box-shadow: 2px 2px 25px #262a2d,
   -2px -2px 25px #000000;
+  z-index: 1;
 }
 
 .txt-container img {
@@ -54,11 +61,16 @@
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
-  #main-container{
+  #main-container {
     position: relative;
   }
 
-  .txt-container img{
+  .mask {
+    background-color: rgba(50, 50, 50, 0.5);
+    backdrop-filter: blur(5px);
+  }
+
+  .txt-container img {
     display: none;
   }
 

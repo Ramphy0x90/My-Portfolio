@@ -3,14 +3,16 @@
 }
 
 #about-me{
-  background: #262a2d !important;
   display: table;
-  //height: 150% !important;
+  background-color: #262A2D;
 }
 
 @media (min-width: 992px) {
   #about-me{
     display: block;
     height: 100% !important;
+    background-image: url("../../../assets/images/abstract.jpg");
+    background-size: cover;
+    background-position: center;
   }
 }
