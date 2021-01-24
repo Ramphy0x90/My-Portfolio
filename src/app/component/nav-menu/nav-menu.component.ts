@@ -36,8 +36,6 @@ export class NavMenuComponent implements OnInit {
       stickyMenu();
       updatePositions();
       colorLinks();
-
-      console.log(navHeight)
     };
 
     function stickyMenu() {
