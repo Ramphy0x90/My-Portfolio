@@ -10,82 +10,79 @@ export class NavMenuComponent implements OnInit {
   public navOptions: String[];
   public sectionPositions: { [name: string]: number; } = {};
 
+  public navbar: any;
+  public docHeight: number;
+  public navHeight: number;
+
+  public activeNavItem: any;
+
   constructor(private dataService: DataService) {
     this.navOptions = this.dataService.getNavOptions();
   }
 
   ngOnInit() {
-    const docHeight = window.innerHeight;
+    this.navbar = document.querySelector('#main-nav');
+    this.docHeight = window.innerHeight;
+    this.navHeight = this.navbar.offsetHeight;
 
-    let navbar = document.getElementById("main-nav");
-    let navHeight;
+    window.addEventListener('scroll', this.onScroll, true);
 
-    let tempNavOptions = this.navOptions;
-    let tempSectionPositions = this.sectionPositions;
-
-    let activeNavItem;
-
-    window.onload = function() {
-      navHeight = navbar.offsetHeight;
-
-      setSectionsHeight();
-      colorLinks();
-    };
-
-    window.onscroll = function() {
-      stickyMenu();
-      updatePositions();
-      colorLinks();
-    };
-
-    function stickyMenu() {
-      if (window.pageYOffset >= docHeight - navHeight) {
-        navbar.classList.add('sticky');
-      } else {
-        navbar.classList.remove('sticky');
-      }
-    }
-
-    function colorLinks() {
-      tempNavOptions.forEach((option, index) => {
-        let navItem = document.getElementById('nav-item-' + index).getElementsByTagName('a')[0];
-        let offsetFromNav = tempSectionPositions[String(option)];
-
-        if (offsetFromNav <= 0 || window.pageYOffset == (document.body.scrollHeight - document.documentElement.offsetHeight)) {
-          activeNavItem = navItem;
-        }
-
-        if (activeNavItem === undefined) {
-          activeNavItem = document.getElementById('nav-item-0').getElementsByTagName('a')[0];
-        }
-
-        navItem.classList.remove('custom-active');
-      });
-
-      activeNavItem.classList.add('custom-active');
-    }
-
-    function setSectionsHeight() {
-      tempNavOptions.forEach(option => {
-        let tempOption = document.getElementById(String(option));
-
-        if (option !== 'contact-me') {
-          tempOption.style.height = (docHeight - navHeight) + 'px';
-        }
-      });
-    }
-
-    function updatePositions() {
-      tempNavOptions.forEach(option => {
-        let tempOption = document.getElementById(String(option));
-        let position = tempOption instanceof HTMLElement ? tempOption.offsetTop : 0;
-        let newPosition = position - window.pageYOffset;
-
-        tempSectionPositions[String(option)] = newPosition - navHeight;
-      });
-    }
-
-    this.sectionPositions = tempSectionPositions;
+    this.updatePositions();
+    this.setSectionsHeight();
+    this.colorLinks();
   }
+
+  stickyMenu() {
+    if (window.pageYOffset >= this.docHeight - this.navHeight) {
+      this.navbar.classList.add('sticky');
+    } else {
+      this.navbar.classList.remove('sticky');
+    }
+  }
+
+  setSectionsHeight() {
+    this.navOptions.forEach(option => {
+      let tempOption = document.getElementById(String(option));
+
+      if (option !== 'contact-me') {
+        tempOption.style.height = (this.docHeight - this.navHeight) + 'px';
+      }
+    });
+  }
+
+  updatePositions() {
+    this.navOptions.forEach(option => {
+      let tempOption = document.getElementById(String(option));
+      let position = tempOption instanceof HTMLElement ? tempOption.offsetTop : 0;
+      let newPosition = position - window.pageYOffset;
+
+      this.sectionPositions[String(option)] = newPosition - this.navHeight;
+    });
+  }
+
+  colorLinks() {
+    this.navOptions.forEach((option, index) => {
+      let navItem = document.getElementById('nav-item-' + index).getElementsByTagName('a')[0];
+      let offsetFromNav = this.sectionPositions[String(option)];
+
+      if (offsetFromNav <= 0 || window.pageYOffset == (document.body.scrollHeight - document.documentElement.offsetHeight)) {
+        this.activeNavItem = navItem;
+      }
+
+      if (this.activeNavItem === undefined) {
+        this.activeNavItem = document.querySelector('#nav-item-0').getElementsByTagName('a')[0];
+      }
+
+      navItem.classList.remove('custom-active');
+    });
+
+    this.activeNavItem.classList.add('custom-active');
+  }
+
+  onScroll = (): void => {
+    this.stickyMenu();
+    this.updatePositions();
+    this.colorLinks();
+  };
 
 }
