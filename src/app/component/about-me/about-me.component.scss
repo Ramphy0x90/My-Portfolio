@@ -47,27 +47,17 @@
 }
 
 @media (min-width: 576px) {
-  .txt-container {
-    //background-color: red !important;
-  }
+
 }
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
-  .txt-container {
-    //background-color: blue !important;
-  }
-}
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
   #main-container {
     position: relative;
   }
 
   .mask {
     background-color: rgba(50, 50, 50, 0.5);
-    backdrop-filter: blur(5px);
   }
 
   .txt-container img {
@@ -81,18 +71,21 @@
   .txt-container {
     width: 75%;
     position: absolute;
-    //background-color: green !important;
   }
 
   .txt, .skill-progress {
-    margin-left: 22%;
+    margin-left: 25%;
   }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+
 }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
   .txt-container {
     font-size: 1.3em;
-    //background-color: #38B000 !important;
   }
 }

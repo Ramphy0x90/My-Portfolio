@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import * as Rellax from '../../../assets/libraries/rellax/rellax.min.js';
 import Typewriter from 't-writer.js';
 
 @Component({
@@ -21,14 +20,6 @@ export class HomeComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    /*let parallaxAboutMeImage = new Rellax('.img-container', {
-      speed: 4,
-    });*/
-    /*let parallaxAboutMeText = new Rellax('.txt-container', {
-      speed: 1,
-    });*/
-
-
     this.homeTitle = new Typewriter(document.querySelector('.tw-title'), this.options);
     this.homeSubTitle = new Typewriter(document.querySelector('.tw-subtitle'), this.options);
 
