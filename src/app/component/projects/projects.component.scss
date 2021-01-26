@@ -3,6 +3,11 @@
 $c_0: #000000;
 $c_1: #353540;
 
+#main-container{
+  width: 100% !important;
+  padding-top: 30%;
+  padding-bottom: 25%;
+}
 
 .container {
   height: 100%;
@@ -11,7 +16,7 @@ $c_1: #353540;
 
 .p-title {
   position: absolute;
-  margin-top: 5%;
+  margin-top: 10%;
   left: 50%;
   transform: translateX(-50%);
   font-size: 2em;
@@ -24,12 +29,20 @@ $c_1: #353540;
 }
 
 .card-image {
-  width: 65%;
+  width: 45%;
   filter: invert(1);
 }
 
 .content-title {
+  width: 100%;
   margin: 8% 0;
+  font-size: 3vw;
+  font-weight: 900;
+}
+
+.content-text {
+  font-size: 3vw;
+  overflow-wrap: break-word;
 }
 
 .container ul {
@@ -44,18 +57,12 @@ $c_1: #353540;
   filter: invert(1);
 }
 
-.content-text {
-  font-size: 1em;
-  overflow-wrap: break-word;
-}
-
 .l-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 30px;
   width: 100%;
   max-width: 1200px;
-  padding: 30px;
 
   @media screen and (max-width: 760px) {
     grid-template-columns: repeat(2, 1fr);
@@ -87,8 +94,6 @@ $c_1: #353540;
     transform: skewX(.001deg);
     transition: transform .35s ease-in-out;
 
-    // Gloss
-
     &::after {
       display: block;
       content: '';
@@ -115,8 +120,6 @@ $c_1: #353540;
 
   }
 
-  // Shadows
-
   &::before {
     display: block;
     content: '';
@@ -137,4 +140,58 @@ $c_1: #353540;
     opacity: 0.6;
     transform: rotateX(7deg) translateY(-6px) scale(1.05);
   }
+}
+
+@media (min-width: 576px) {
+  .content-title {
+    font-size: 4vw;
+  }
+
+  .content-text {
+    font-size: 3.5vw;
+    overflow-wrap: break-word;
+  }
+
+  .container ul {
+    font-size: 1em;
+  }
+
+}
+
+@media (min-width: 768px) {
+  .p-title {
+    margin-top: 5%;
+  }
+
+  .content-title {
+    font-size: 1.7vw;
+  }
+
+  .content-text {
+    font-size: 1.5vw;
+    overflow-wrap: break-word;
+  }
+
+  .container ul {
+    font-size: .8em;
+  }
+
+  #main-container{
+    width: 100% !important;
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+
+}
+
+@media (min-width: 1200px) {
+  .content-title {
+    font-size: 1.3vw;
+  }
+
+  .content-text {
+    font-size: 1.2vw;
+    overflow-wrap: break-word;
+  }
+
 }
