@@ -9,15 +9,21 @@
 
 #projects {
   background-color: #0b0d0e;
-  //background-image: linear-gradient(to right top, #000000, #090809, #100f12, #141518, #161a1d);
+}
+
+@media (min-width: 576px) {
+  #about-me {
+    position: relative;
+    width: 100%;
+    height: 100% !important;
+    background-image: url("/../../../assets/images/wp_about-me.jpg");
+    background-size: cover;
+    background-position: center;
+  }
 }
 
 @media (min-width: 768px) {
   #about-me {
     display: block;
-    height: 100% !important;
-    background-image: url("/../../../assets/images/wp_about-me.jpg");
-    background-size: cover;
-    background-position: center;
   }
 }
