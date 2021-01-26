@@ -1,6 +1,6 @@
 export let NAV_OPTIONS: string[] = [
   'home',
   'about-me',
-  'projects',
+  //'projects',
   'contact-me'
 ];
