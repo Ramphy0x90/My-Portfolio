@@ -164,11 +164,11 @@ $c_1: #353540;
   }
 
   .content-title {
-    font-size: 1.7vw;
+    font-size: 1.5vw;
   }
 
   .content-text {
-    font-size: 1.5vw;
+    font-size: 1.3vw;
     overflow-wrap: break-word;
   }
 
@@ -190,8 +190,12 @@ $c_1: #353540;
   }
 
   .content-text {
-    font-size: 1.2vw;
+    font-size: 1.1vw;
     overflow-wrap: break-word;
+  }
+
+  .container ul {
+    font-size: 1em;
   }
 
 }

@@ -44,7 +44,7 @@ export class NavMenuComponent implements OnInit {
     this.navOptions.forEach(option => {
       let tempOption = document.getElementById(String(option));
 
-      if (option !== 'contact-me') {
+      if (option !== 'contact-me' && option !== 'about-me' ) {
         tempOption.style.height = (this.docHeight - this.navHeight) + 'px';
       }
     });
