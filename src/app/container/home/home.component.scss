@@ -14,18 +14,23 @@
 }
 
 @media (min-width: 576px) {
+  #projects {
+    display: block;
+    width: 100%;
+    background-color: #0b0d0e;
+  }
+
   #about-me {
     position: relative;
     width: 100%;
-    height: 100% !important;
     background-image: url("/../../../assets/images/wp_about-me.jpg");
     background-size: cover;
     background-position: center;
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1150px) and (min-height: 800px) {
   #about-me {
-    display: block;
+    display: table;
   }
 }
