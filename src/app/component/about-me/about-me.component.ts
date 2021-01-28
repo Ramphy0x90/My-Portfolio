@@ -33,8 +33,6 @@ export class AboutMeComponent implements OnInit {
     let padding = ((this.docHeight - this.navHeight) - mainContainer.offsetHeight) / 2;
 
     mainContainer.style.padding = padding + "px 0";
-
-    console.log(padding)
   }
 
 }
