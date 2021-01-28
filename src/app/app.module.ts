@@ -16,6 +16,7 @@ import {ProjectsComponent} from './component/projects/projects.component';
 import {ContactMeComponent} from './component/contact-me/contact-me.component';
 import {NgParticlesModule} from 'ng-particles';
 import {ParticlesComponent} from './component/particles/particles.component';
+import {CardComponent} from './component/card/card.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import {ParticlesComponent} from './component/particles/particles.component';
     AboutMeComponent,
     ProjectsComponent,
     ContactMeComponent,
-    ParticlesComponent
+    ParticlesComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,

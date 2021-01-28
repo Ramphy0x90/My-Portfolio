@@ -1,0 +1,16 @@
+<div class="main-card"data-aos="zoom-in" data-aos-offset="1050" data-aos-duration="1200">
+  <div class="main-card__cover rounded">
+    <div [class]="'container ' + cardBg">
+      <div class="img-container p-3">
+        <img [src]="cardImg" class="img-fluid" alt="Card Image">
+      </div>
+      <div class="content-text container">
+        <h1>{{cardTitle}}</h1>
+        <ul class="text-left">
+          <li><img src="./assets/images/list_img.svg" class="mr-2" alt="Card List Image">{{cardTech}}</li>
+        </ul>
+        <div class="mt-3">{{cardDescription}}</div>
+      </div>
+    </div>
+  </div>
+</div>
