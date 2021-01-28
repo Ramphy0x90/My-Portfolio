@@ -12,8 +12,6 @@
   max-width: 40%;
   margin-top: 10%;
   position: relative;
-  box-shadow: 20px 20px 60px #262a2d,
-  -20px -20px 60px #000000;
 }
 
 .txt-container {
@@ -23,8 +21,6 @@
   background: #141E30;
   background: -webkit-linear-gradient(to right, #243B55, #141E30);
   background: linear-gradient(to right, #243B55, #141E30);
-  box-shadow: 2px 2px 25px #262a2d,
-  -2px -2px 25px #000000;
   z-index: 1;
 }
 
@@ -35,9 +31,6 @@
 .progress {
   height: 10px;
   border-radius: 25px;
-}
-
-@media (min-width: 576px) {
 }
 
 @media (min-width: 768px) {

@@ -1,12 +1,15 @@
-<h1 class="p-title">Projects</h1>
-<div id="main-container" class="container text-center d-flex align-items-center">
-  <div class="l-container">
-    <app-card *ngFor="let project of projects"
-              [cardTitle]="project.title"
-              [cardTech]="project.tech"
-              [cardDescription]="project.description"
-              [cardImg]="project.img"
-              [cardBg]="project.background"></app-card>
+<div id="main-container-p" class="text-center">
+  <h1 class="p-title">Projects</h1>
+  <div class="container text-center d-flex align-items-center justify-content-center p-0">
+    <div class="container row d-flex justify-content-center p-0">
+      <div class="col-6 col-md-3 my-3" *ngFor="let project of projects">
+        <app-card [cardTitle]="project.title"
+                  [cardTech]="project.tech"
+                  [cardDescription]="project.description"
+                  [cardImg]="project.img"
+                  [cardBg]="project.background"></app-card>
+      </div>
+    </div>
   </div>
 </div>
 
