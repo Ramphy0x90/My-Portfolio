@@ -11,7 +11,10 @@ export class ProjectsComponent implements OnInit {
 
   public navbar: any;
   public docHeight: number;
+  public docWidth: number;
   public navHeight: number;
+
+  public dataAosOffset: number;
 
   constructor(private dataService: DataService) {
     this.projects = this.dataService.getProjects();
@@ -23,14 +26,20 @@ export class ProjectsComponent implements OnInit {
 
   onLoad(){
     this.navbar = document.querySelector('#main-nav');
-    this.docHeight = window.innerHeight;
     this.navHeight = this.navbar.offsetHeight;
+
+    this.docWidth = window.innerWidth;
+    this.docHeight = window.innerHeight;
 
     let mainContainer = document.getElementById("main-container-p");
     let padding = ((this.docHeight - this.navHeight) - mainContainer.offsetHeight) / 2;
 
     mainContainer.style.padding = padding + "px 0";
 
-    console.log(padding)
+    this.dataAosOffset = (this.docWidth <= 767) ?  (mainContainer.offsetTop / 10) * 8 : 0;
+  }
+
+  dataAosDirection(position: number){
+
   }
 }
