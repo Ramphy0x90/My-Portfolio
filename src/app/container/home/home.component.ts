@@ -1,6 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import Typewriter from 't-writer.js';
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -20,6 +23,8 @@ export class HomeComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
+    AOS.init();
+
     this.homeTitle = new Typewriter(document.querySelector('.tw-title'), this.options);
     this.homeSubTitle = new Typewriter(document.querySelector('.tw-subtitle'), this.options);
 
